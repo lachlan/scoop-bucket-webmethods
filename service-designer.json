@@ -1,0 +1,30 @@
+{
+    "version": "11.1-R01",
+    "description": "IBM webMethods Service Designer 11.1",
+    "url": "https://softwareag-usa.s3.amazonaws.com/webMethods/Service+Designer/Service+Designer+11.1/wMServiceDesigner-11.1-R01-win-x64-JDK.zip",
+    "hash": "2cbd117332b1a4d15f5489ad567af216458ee60163b692b971066bc37880ed6f",
+    "homepage": "https://developer.softwareag.com/en/webmethods-service-designer.html",
+    "license": "Commercial",
+    "extract_dir": "wMServiceDesigner",
+    "pre_install": [
+        "$designer_ini_file = -join($dir, \"\\ServiceDesigner.ini\")",
+        "$designer_ini_file_content = Get-Content $designer_ini_file",
+        "$designer_ini_file_update = $designer_ini_file_content.Replace(\"@INSTALL_ROOT\", $dir)",
+        "Set-Content -Path $designer_ini_file -Value $designer_ini_file_update",
+        "$eclipse_ini_file = -join($dir, \"\\Designer\\eclipse\\configuration\\config.ini\")",
+        "$eclipse_ini_file_content = Get-Content $eclipse_ini_file",
+        "$eclipse_ini_file_update = $eclipse_ini_file_content.Replace(\"@INSTALL_ROOT\", $dir.Replace(\"\\\", \"\\\\\").Replace(\":\", \"\\:\"))",
+        "Set-Content -Path $eclipse_ini_file -Value $eclipse_ini_file_update"
+    ],
+    "bin": [
+        "ServiceDesigner.exe"
+    ],
+    "shortcuts": [
+        [
+            "ServiceDesigner.exe",
+            "Service Designer 11.1",
+            "",
+            "Designer/resources/SoftwareAGDesigner111.ico"
+        ]
+    ]
+}
