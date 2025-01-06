@@ -56,8 +56,7 @@ For repository maintainers, follow these instructions to manually keep this
 [git] repository up to date with new versions of Service Designer:
 
 1. Locate the new Service Designer version's download image:
-   * Download the new version from the [IBM webMethods Service Designer web
-     site][IBM webMethods Service Designer] in a web browser
+   * Download the new version from the [IBM webMethods Service Designer Download page][IBM webMethods Service Designer Download] in a web browser
    * Note down the downloaded zip file's URI link from the web brower's
      downloads window
    * Note down the Service Designer icon resource file name (with the
@@ -107,5 +106,6 @@ C:\><git_install_directory>\current\usr\bin\sha256sum <downloaded_file_name>
 [bucket]: <https://github.com/ScoopInstaller/Scoop/wiki/Buckets>
 [git]: <https://git-scm.com/>
 [IBM webMethods Service Designer]: <https://developer.softwareag.com/en/webmethods-service-designer.html>
+[IBM webMethods Service Designer Download]: <https://tech.forums.softwareag.com/t/webmethods-service-designer-download/235227>
 [PowerShell]: <https://learn.microsoft.com/en-us/powershell/>
 [scoop]: <https://scoop.sh/>
